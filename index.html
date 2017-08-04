@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top" />
+    <?!= include('style'); ?>
+    <?!= include('secrets'); ?>
+    <?!= include('scripts'); ?>
+  </head>
+  <body>
+    <div class="display_area">
+      <!-- I know the insides aren't centered but I'll get to that later -->
+      <div id="title">
+        <h1>Concert+Weather Tool</h1>
+      </div>
+      <div id="map_text_input">
+        <div><label>Location </label><input id="location" type="text" /></div>
+      </div>
+      <div><input type="button" value="Submit" id="submission" /></div>
+      <div id="info_zone">
+        <div id="event_portion">
+          <!-- We load in the event data using a googlescript template -->
+        </div>
+        <div id="map_portion">
+          <h2 id="map_header">Map</h2>
+          <div>
+            <div id="map_sidebar">
+            </div>
+            <div id="map_area">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="credits">
+        <?!= include('attribution-songkick'); ?>
+        <?!= include('attribution-darksky'); ?>
+      </div>
+    </div>
+  </body>
+</html>
+
